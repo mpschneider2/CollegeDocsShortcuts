@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Enhanced Shortcuts for Google Docs",
+  "description": "Keyboard Shortcuts (for use with macro pad) for Google Docs buttons DEEP within the software",
+  "version": "1.0",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "content.js"
+      ],
+      "matches": [
+        "*://docs.google.com/document/*"
+      ]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://docs.google.com/document/*"
+  ],
+  "commands": {
+    "editing": {
+      "description": "Switch to Edit Mode"
+    },
+    "suggesting": {
+      "description": "Switch to Suggesting Mode"
+    },
+    "word_count": {
+      "description": "Enable Small Word Count Dialogue"
+    },
+    "accept_all": {
+      "description": "Preview Accept All"
+    },
+    "show_suggested_edits": {
+      "description": "Switch to 'Show suggested edits' mode"
+    }
+  }
+}
