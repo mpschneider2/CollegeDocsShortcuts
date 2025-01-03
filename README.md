@@ -4,7 +4,7 @@ _Note that for all the chrome:// links, you may need to type them into the URL b
 
 First, download the Repo as a zip, then go to <chrome://extensions/> and enable "Developer Mode" on the top right.
 
-Then, click "Load Unpacked Extension" and select the ZIP file.
+Unzip the zip file in a place it can live forever, then, click "Load Unpacked" on the <chrome://extensions/> page and select the folder that came from the zip file.
 
 Then, navigate to <chrome://extensions/shortcuts> and you can choose whichever shortcuts for the functions you want. You may need to reload the Google Doc for the shortcuts to begin taking effect.
 
