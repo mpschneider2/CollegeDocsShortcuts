@@ -1,8 +1,8 @@
 # Exactly what it sound like one should do to install, and the extension's purpose is self-explanatory.
 
-_Note that for all the chrome:// links, you may need to type them into the URL bar manually_
+_Note that for all the chrome:// links, you may need to type them into the URL bar manually._ Inspiration and snippets of code taken from <https://github.com/ZackMurry/docs-hotkey/tree/main?tab=readme-ov-file>.
 
-First, downlaod the Repo as a zip, then go to <chrome://extensions/> and enable "Developer Mode" on the top right.
+First, download the Repo as a zip, then go to <chrome://extensions/> and enable "Developer Mode" on the top right.
 
 Then, click "Load Unpacked Extension" and select the ZIP file.
 
