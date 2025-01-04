@@ -64,7 +64,8 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
         clickEl(document.querySelector("body > div.goog-menu.goog-menu-vertical.docs-material.goog-menu-noaccel.docs-toolbar-mode-switcher-menu.apps-menu-hide-mnemonics > div:nth-child(2)"));
         return true;
     } else if (msg.action == 'word_count') {
-        clickEl(document.querySelector("#\\:99"));
+        //clickEl(document.querySelector("#\\:99"));
+        waitForSpanAndClick('Word count', (el) => {clickEl(el)});
 
         // Wait for the "Word count" button and click it after it appears
 
@@ -76,22 +77,20 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
         waitForElementAndClick("body > div.javascriptMaterialdesignGm3WizDialog-dialog.javascriptMaterialdesignGm3WizDialog-dialog--standard.javascriptMaterialdesignGm3WizDialog-dialog--use-old-tokens.javascriptMaterialdesignGm3WizDialog-dialog--open > div.javascriptMaterialdesignGm3WizDialog-dialog__container > div > div.javascriptMaterialdesignGm3WizDialog-dialog__actions > div:nth-child(2) > button", (el) => clickEl(el));
         return true;
     } else if (msg.action == 'accept_all') {
-        const menu = document.querySelector("#\\:9a")
         const span = Array.from(document.querySelectorAll('span')).find(el => el.textContent.includes('Preview "Accept all"'));
         if (span) {
             clickEl(span);
         } else {
-            clickEl(menu);
+            waitForSpanAndClick('Review suggested edits', (el) => {clickEl(el)});
             waitForSpanAndClick('Preview "Accept all"', (el) => clickEl(el));
         }
         return true;
     } else if (msg.action == 'show_suggested_edits') {
-        const menu = document.querySelector("#\\:9a")
         const span = Array.from(document.querySelectorAll('span')).find(el => el.textContent.includes('Show suggested edits'));
         if (span) {
             clickEl(span);
         } else {
-            clickEl(menu);
+            waitForSpanAndClick('Review suggested edits', (el) => {clickEl(el)});
             waitForSpanAndClick('Show suggested edits', (el) => clickEl(el));
         }
         return true;
